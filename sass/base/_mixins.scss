@@ -1,1 +1,18 @@
 /* Custom Mixins -------------------- */
+@mixin font-face ($family, $file) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$path-font}/#{$file}-webfont.eot'),
+        url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+        url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+    }
+}
+
+// Text
+
+@mixin text ($size, $l-height: null, $weight: null, $color: null) {
+    font-size: $size;
+    line-height: $l-height;
+    font-weight: $weight;
+    color: $color;
+}

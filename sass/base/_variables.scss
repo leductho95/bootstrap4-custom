@@ -1,12 +1,44 @@
 //Custom variables
+$primary:       #789629;
+$black:      #050505;
 
 // Descriptive color variables
+$gray-1: #c1c1c1;
+$gray-2: #818181;
+$sunflower: #E3CE33; 
+$greyser: #CBD3DF; 
+$bermuda: #88d8da;
+$pink: #f49ac2;
+$codgray: #1a1a1a;
+$wild-sand: #f4f4f4;
+$tundora: #494949;
+$alto: #d1d1d1;
+$nobel: #b4b4b4;
+$silver: #c2c2c2;
 
 // Functional color variables
+$body-color:    $codgray;
+$navbar-bg-color:   $wild-sand;
+$heading-color: $black;
+$heading-under-line-color: $nobel;
+$navbar-color:  $codgray;
+$navbar-color-active: $primary;
+$border-color: $silver;
+$product-bg-1: $sunflower; 
+$product-bg-2: $greyser; 
+$product-bg-3: $bermuda;
+$product-bg-4: $pink;
+$tab-color:  $gray-2;
+$footer-bg: $black;
+$footer-heading-color: $alto;
+$footer-color: $tundora;
 
 // Font stacks
-
+$stack-opensans: 'Open Sans', $font-family-base;
+$stack-roboto: 'Roboto Slab', $font-family-base;
+$stack-playball: 'Playball', $font-family-base;
 // Asset paths
-$path-image   :   '../img';
-$path-fonts     :  '../fonts';
-$blue:   red;
+$path-image   :'../img';
+$path-fonts     :'../fonts';
+
+
