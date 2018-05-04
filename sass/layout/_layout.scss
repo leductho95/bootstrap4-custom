@@ -1,0 +1,77 @@
+
+.feature-box {
+    margin: 40px 0;
+    [class*='col-'] {
+        border-right: 1px solid $border-color;
+        &:last-child {
+            border: none;
+        }
+    }
+    .feature-item {
+        p {
+            margin-bottom: 0;
+        }
+        img {
+            margin-bottom: 15px;
+
+        }
+    }
+    
+}
+
+.banner-product {
+    .banner-product-text:nth-child(1) {
+        background: $product-bg-1;
+    }
+
+    .banner-product-text:nth-child(2) {
+        background: $product-bg-2;
+    }
+
+    .banner-product-text:nth-child(1) {
+        background: $product-bg-1;
+    }
+
+    .banner-product-text:nth-child(1) {
+        background: $product-bg-1;
+    }
+}
+
+.testimonial {
+    .testimonial-content {
+        background: url('#{ $path-image }/bg-testimonial.jpg') right center no-repeat;
+    }
+    
+    img {
+        @include border-radius(50%);
+        @include border(3px, solid, $primary) ;    
+        padding: 10px;
+    }
+ }
+
+
+ .social {
+    a {
+        color: $social-color;
+        display: inline-block;
+        margin: 0 10px;
+        text-transform: uppercase;
+        @include transition (all .3s ease);
+        i {
+            @include border-radius(50%);
+            @include border(3px, solid, $social-color) ;    
+            @include box-circle (30px, 30px, 25px);
+            text-align: center;
+            margin-right: 10px;
+        }
+        &:active,
+        &:hover {
+            color: $black;
+            border-color: $black;
+            i {
+                color: $black;
+                border-color: $black;
+            }
+        }
+    }
+ }

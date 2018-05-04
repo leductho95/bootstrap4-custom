@@ -16,3 +16,29 @@
     font-weight: $weight;
     color: $color;
 }
+
+@mixin transition( $transition...) {
+  -webkit-transition:  $transition;
+  -moz-transition:  $transition;
+  -ms-transition:  $transition;
+  -o-transition:  $transition;
+  transition:  $transition;
+}
+
+@mixin border-radius ( $radius ) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin border($width, $style, $color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+
+@mixin box-circle ( $width, $height, $l-height: null) {
+    width: $width;
+    height: $height;
+    line-height: $l-height;
+}

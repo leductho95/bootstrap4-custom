@@ -9,7 +9,8 @@ $sunflower: #E3CE33;
 $greyser: #CBD3DF; 
 $bermuda: #88d8da;
 $pink: #f49ac2;
-$codgray: #1a1a1a;
+$codgray-1: #1a1a1a;
+$codgray-2: #cacaca;
 $wild-sand: #f4f4f4;
 $tundora: #494949;
 $alto: #d1d1d1;
@@ -17,11 +18,11 @@ $nobel: #b4b4b4;
 $silver: #c2c2c2;
 
 // Functional color variables
-$body-color:    $codgray;
+$body-color:    $codgray-1;
 $navbar-bg-color:   $wild-sand;
 $heading-color: $black;
 $heading-under-line-color: $nobel;
-$navbar-color:  $codgray;
+$navbar-color:  $codgray-1;
 $navbar-color-active: $primary;
 $border-color: $silver;
 $product-bg-1: $sunflower; 
@@ -29,16 +30,22 @@ $product-bg-2: $greyser;
 $product-bg-3: $bermuda;
 $product-bg-4: $pink;
 $tab-color:  $gray-2;
+$social-color: $codgray-2;
 $footer-bg: $black;
 $footer-heading-color: $alto;
 $footer-color: $tundora;
 
+// Typography
+$footer-heading-fontsize: 1.125rem;
+
+
 // Font stacks
 $stack-opensans: 'Open Sans', $font-family-base;
-$stack-roboto: 'Roboto Slab', $font-family-base;
+$stack-roboto: 'Roboto', $font-family-base;
+$stack-roboto-slab: 'Roboto Slab', $font-family-base;
 $stack-playball: 'Playball', $font-family-base;
 // Asset paths
-$path-image   :'../img';
+$path-image   :'../images';
 $path-fonts     :'../fonts';
 
 

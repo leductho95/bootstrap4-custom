@@ -9587,13 +9587,103 @@ a.text-dark:hover, a.text-dark:focus {
 /* Base Styles -------------------- */
 body {
   font-size: 0.875em;
-  line-height: 1.5;
-  font-weight: 500;
+  line-height: 30px;
+  font-weight: 400;
   color: #1a1a1a; }
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none; }
+
+.gutter-10 {
+  padding-left: 5px !important;
+  padding-right: 5px !important; }
+
+.feature-box {
+  margin: 40px 0; }
+  .feature-box [class*='col-'] {
+    border-right: 1px solid #c2c2c2; }
+    .feature-box [class*='col-']:last-child {
+      border: none; }
+  .feature-box .feature-item p {
+    margin-bottom: 0; }
+  .feature-box .feature-item img {
+    margin-bottom: 15px; }
+
+.banner-product .banner-product-text:nth-child(1) {
+  background: #E3CE33; }
+
+.banner-product .banner-product-text:nth-child(2) {
+  background: #CBD3DF; }
+
+.banner-product .banner-product-text:nth-child(1) {
+  background: #E3CE33; }
+
+.banner-product .banner-product-text:nth-child(1) {
+  background: #E3CE33; }
+
+.testimonial .testimonial-content {
+  background: url("../images/bg-testimonial.jpg") right center no-repeat; }
+
+.testimonial img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #789629;
+  padding: 10px; }
+
+.social a {
+  color: #cacaca;
+  display: inline-block;
+  margin: 0 10px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .social a i {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #cacaca;
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+    margin-right: 10px; }
+  .social a:active, .social a:hover {
+    color: #050505;
+    border-color: #050505; }
+    .social a:active i, .social a:hover i {
+      color: #050505;
+      border-color: #050505; }
 
 .bg-dark {
   background-color: #f4f4f4 !important; }
   .bg-dark a {
     color: #1a1a1a !important; }
+
+footer {
+  background: #050505;
+  color: #494949;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  footer h2 {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    color: #d1d1d1;
+    font-weight: 400; }
+  footer a {
+    color: #494949; }
+  footer i {
+    color: #789629;
+    margin-right: 5px; }
+
+.about-us {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  .about-us p > span:nth-child(2) {
+    margin-left: 15px; }
 
 /*# sourceMappingURL=main.css.map */
