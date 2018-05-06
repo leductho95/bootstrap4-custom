@@ -1,29 +1,37 @@
 footer {
-	background: $footer-bg;
-	color: $footer-color;
-	font-family: $stack-opensans;
-	h2 {
-		text-transform: uppercase;
-		font-size: $footer-heading-fontsize;
-		color: $footer-heading-color;
-		font-weight: $font-weight-base;
-	}
+    background: $footer-bg;
+    color: $footer-color;
+    font-family: $stack-opensans;
+    
+    h2 {
+        text-transform: uppercase;
+        font-size: $footer-heading-fontsize;
+        color: $footer-heading-color;
+        font-weight: $font-weight-base;
+    }
 
-	a {
-		color: $footer-color;
-	}
+    a {
+        color: $footer-color;
+    }
 
-	i {
-		color: $primary;
-		margin-right: 5px;
-	}
+    p {
+        margin-bottom: 0;
+    }
+
+    i {
+        color: $primary;
+        margin-right: 5px;
+    }
 }
 
+.copy-right {
+    border-top: 1px solid;
+    padding: 16px 0;
+}
 
 .about-us {
-	font-family: $stack-roboto;
-	p > span:nth-child(2) {
-		margin-left: 15px;
-	}
-
+    font-family: $stack-roboto;
+    p>span:nth-child(2) {
+        margin-left: 15px;
+    }
 }

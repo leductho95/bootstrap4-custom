@@ -18,14 +18,13 @@
 //# sourceMappingURL=bootstrap.min.js.map
 $(document).ready(function() {
     // popup newsletter
+    $('.overlay-newsletter, .newsletter').hide();
+    $('.overlay-newsletter, .newsletter a').click(function() {
+        $('.newsletter, .overlay-newsletter').addClass('hide-popup');
+    });
 
-   	$('.overlay-newsletter').click(function() {
-   		alert('click')
-   		$(this).addClass('hide-popup');
-   	});
-    // var popup = setInterval(function(){
-    // 	$('.overlay-newsletter, .newsletter').hide();
-    // 	clearInterval(popup);
-    // }, 3000);
+    // var popup = setInterval(function() {
+    //     $('.newsletter, .overlay-newsletter').addClass('hide-popup');
+    // }, 5000);
 });
 //# sourceMappingURL=main.js.map

@@ -7,11 +7,12 @@
     height: 100%;
     z-index: 1;
     cursor: pointer;
-    @include transition(all .5s ease);
+    @include transition(all .3s ease);
 }
 
 .hide-popup {
     opacity: 0;
+    transform: scale(0);
     visibility: hidden;
 }
 
@@ -22,6 +23,7 @@
     z-index: 2;
     transform: translate(-50%, -20%);
     text-align: center;
+    @include transition(all .3s ease);
     a {
         color: #fff;
         font-size: 3em;
@@ -34,6 +36,7 @@
         width: 600px;
         height: 600px;
         background: url('#{$path-image}/bg_popup.png') no-repeat;
+        @include transition(all .3s ease);
     }
 }
 
@@ -45,8 +48,15 @@
         &:last-child {
             border: none;
         }
+
+        @media screen and (max-width: 767px) {
+            border-right: 0;
+        }
     }
     .feature-item {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 15px;
+        }
         p {
             margin-bottom: 0;
         }

@@ -1,0 +1,64 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="bootstrap-4-boilerplate">Bootstrap 4 boilerplate</h1>
+<p>A <a href="https://getbootstrap.com/">Bootstrap</a> v4.1.0 boiler plate with <a href="http://sass-lang.com/">Sass</a>, concatenation, minification, autoprefixer, <a href="https://www.browsersync.io/">Browsersync</a>, hot reloading and sourcemaps all runned by <a href="https://gulpjs.com/">Gulp</a>.</p>
+<p><img src="https://user-images.githubusercontent.com/10498583/31125543-e2a88c2c-a848-11e7-87b0-d20ea38d41d0.jpg" alt="bootstrap logo">
+<img src="https://user-images.githubusercontent.com/10498583/31125541-e2a732e6-a848-11e7-959d-7d7b0c138124.jpg" alt="sass logo">
+<img src="https://user-images.githubusercontent.com/10498583/31125542-e2a78b88-a848-11e7-8ac5-c396f46e811f.jpg" alt="gulp logo">
+<img src="https://user-images.githubusercontent.com/10498583/31125540-e2a6eed0-a848-11e7-817a-69c5619f772a.jpg" alt="browsersync logo"></p>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code># 1 Clone this repo
+git clone https://github.com/wapbamboogie/bootstrap-4-boilerplate.git
+
+# 2 Navigate into the repo directory
+cd bootstrap-4-boilerplate
+
+# 3 Install all node packages
+npm install
+
+# 4 Get started
+gulp serve - starts localhost server with browser-sync, watches HTML, Sass, JS with hot reloading
+gulp - minify CSS/JS and builds your app into the dist directory, ready for production
+</code></pre><h2 id="requirements">Requirements</h2>
+<p>This project requires you have <a href="https://nodejs.org/en/">nodejs</a> with <a href="https://www.npmjs.com/get-npm">npm</a> installed.
+This project requires you have a global installation of <a href="http://gulpjs.com/">gulp</a>.</p>
+<pre><code># Install gulp globally
+npm install -g gulp
+</code></pre><h2 id="gulp-commands">Gulp commands</h2>
+<p><strong>gulp serve</strong></p>
+<p>The gulp serve command starts a local Browsersync server that serves your files in the browser.
+It reloads the current page when changing HTML, PHP, Sass and JS files.
+The output of all Sass files go to main.css
+All JS files are concatenated into main.js
+You can access the development server with other devices on the same network. Go to the &quot;External&quot; address specified by Browsersync (see the terminal) in the web browser of your device.</p>
+<pre><code>gulp serve
+</code></pre><p><strong>gulp (build)</strong></p>
+<p>The default gulp command is set to creating a &quot;dist&quot; directory with a production version of the project, ready to be deployed.
+It minifies and renames JS/CSS assets as well as cleaning the old &quot;dist&quot; directory. CSS is autoprefixed for the latest two browser versions.</p>
+<pre><code>gulp
+</code></pre><p><strong>gulp concatScripts</strong></p>
+<p>The gulp concatScripts command combines the specified JS resources into main.js
+You can add new JS files to this command on line 16 in gulpfile.js
+You might want to run concatScripts once separately after adding new JS files.</p>
+<pre><code>gulp concatScripts
+</code></pre><h2 id="overwriting-bootstrap-sass-variables">Overwriting Bootstrap sass variables</h2>
+<p>You can overwrite specific bootstrap sass variables by uncommenting lines in assets/css/1-frameworks/bootstrap/bootstrap-user-variables.scss</p>
+<h2 id="php-support">PHP Support</h2>
+<p>If you need a server with PHP support you can use the project with <a href="https://www.mamp.info/en/mamp-pro/">MAMP Pro</a> or similar.</p>
+<ul>
+<li>Create a new host in the hosts panel of MAMP Pro and choose the project folder as the document root.</li>
+<li>Enable Symlinks settings in the &quot;Extended&quot; tab of the host configuration.</li>
+<li>On line 82 in gulpfile.js change the browserSync.init function to the following:<pre><code>browserSync.init({
+  proxy: &quot;http://name-of-your-mamp-host:8888&quot;,
+  open: &quot;external&quot;
+});
+</code></pre></li>
+<li>Start the MAMP services and run &quot;gulp serve&quot; as before.</li>
+</ul>
+
+      </body>
+    </html>

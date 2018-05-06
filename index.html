@@ -20,99 +20,97 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm|md|lg|-xl navbar-dark|light bg-primary|secondary|success|danger|warning|info|light|dark">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a href="#"><img src="images/logo.png" alt="logo"></a>
-                </div>
-                <div class="col-6">
-                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href=".">Trang chủ<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Giới thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sản phẩm</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Tin Tức</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Liên hệ</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+    <header>
+        <div class="menu">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-3">
+                        <div class="header-logo">
+                            <a href="#" title="logo"><img src="images/logo.png" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="main-menu">
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href=".">Trang chủ<span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Giới thiệu</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Sản phẩm</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Tin Tức</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Liên hệ</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </li>
-                        </ul>
+                            </nav>
+                        </div>
                     </div>
-                </div>
-                <div class="col text-right">
-                    <div class="menu-right">
-                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                        <a href="#"><i class="fa fa-search"></i></a>
+                    <div class="col-sm-3">
+                        <div class="header-right text-right">
+                            <a href="#" title="cart icon"><i class="fa fa-shopping-cart"></i></a>
+                            <a href="#" title="search icon"><i class="fa fa-search"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
-    <div class="slider">
-        <div id="carouselId" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselId" data-slide-to="1"></li>
-                <li data-target="#carouselId" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src="images/bg-slider1.jpg" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Title</h3>
-                        <p>Description</p>
+        <div class="slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="slider-left text-center">
+                            <img src="images/bottle_03.jpg" alt="bottle" class="img-fluid">
+                            <h1>Green Vera</h1>
+                            <p>Sản phẩm tinh dầu dưỡng da mới nhất của Mandala </p>
+                            <h2>Giá chỉ  750.000đ</h2>
+                            <a href="#" title="shop">Mua hàng</a>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/bg-slider1.jpg" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Title</h3>
-                        <p>Description</p>
+                    <div class="col-sm-7">
+                        <div class="slider-right">
+                            <img src="images/girl.png" alt="girl" class="img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
         </div>
-    </div>
+    </header>
     <div class="feature-box">
         <div class="container text-center">
             <div class="row">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-12 col-md-4">
                     <div class="feature-item">
                         <img src="images/feature-img1.jpg" alt="feature-image">
                         <p>Miễn phí vận chuyển</p>
                     </div>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-12 col-md-4">
                     <div class="feature-item">
                         <img src="images/feature-img2.jpg" alt="feature-image">
                         <p>Nhận ngay quà tặng trị giá 350.000đ</p>
                     </div>
                 </div>
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-12 col-md-4">
                     <div class="feature-item">
                         <img src="images/feature-img3.jpg" alt="feature-image">
                         <p>Giảm 30% cho đơn hàng trên 5.000.000đ</p>
@@ -146,9 +144,9 @@
                     </div>
                     <div class="col-6 gutter-10">
                         <div class="banner-product-img">
-                            <a href="#" title="">
-                              <img src="images/product1.jpg" alt="banner product" class="img-fluid">
-                          </a>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=SItFPrgEITM"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,17 +183,20 @@
     <div class="testimonial">
         <div class="container">
             <div class="row">
-                <div class="testimonial-content">
-                    <div class="testimonial-item">
-                        <img src="images/avatar.jpg" alt="avatar" class="img-fluid float-left mr-5">
-                        <div class="testimonial-right">
-                            <p>
-                                <blockquote>Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai
-                                    <br> cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto </blockquote>
-                                <span>TutiLe</span><em> _ Giám đốc phát triển sản phẩm</em>
-                            </p>
+                <div class="col">
+                    <div class="testimonial-content">
+                        <div class="testimonial-item">
+                            <img src="images/avatar.jpg" alt="avatar" class="img-fluid float-left mr-5">
+                            <div class="testimonial-right">
+                                <p>
+                                    <blockquote>Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo
+                                        <br>nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với
+                                        <br> công nghệ cải tiến mới nhất, hãng Rohto </blockquote>
+                                    <span>TutiLe</span><em> _ Giám đốc phát triển sản phẩm</em>
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
@@ -316,10 +317,10 @@
         <div class="copy-right">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-12 ">
-                        <p class="text-xs-center">&copy; Copyright 2008-2014 DKT Technology JSC</p>
+                    <div class="col-sm-6 col-xs-12 text-center text-sm-left">
+                        <p>&copy; Copyright 2008-2014 DKT Technology JSC</p>
                     </div>
-                    <div class="col-sm-6 col-xs-12 text-md-right text-xs-center">
+                    <div class="col-sm-6 col-xs-12 text-center text-sm-right">
                         <a href="#" title=""><img src="images/payment.png" alt="payment"></a>
                     </div>
                 </div>

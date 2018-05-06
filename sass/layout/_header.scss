@@ -1,6 +1,98 @@
-.bg-dark {
-    background-color: $navbar-bg-color !important;
+header {
+    background-color: #f1f1f1;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(800px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.menu {
+    background-color: $navbar-bg-color;
+    border-bottom: 1px solid $border-color;
+    padding: 9px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.navbar-nav {
+    li {
+        a {
+            color: $navbar-color;
+            text-transform: uppercase;
+            @include font-size(12px);
+        }
+        &.active a {
+            color: $primary;
+        }
+    }
+}
+
+.slider-left {
+    padding-top: 140px;
+
+    h1,
+    h2 {
+        color: $primary;
+    }
+
+    h2,
     a {
-        color: $navbar-color !important;
+        text-transform: uppercase;
+        font-weight: $font-weight-light;
+
+    }
+
+    a {
+    	text-decoration: underline;
+    }
+
+	h1 {
+		@include font-size(141.27px);
+	}
+
+    h2 {
+    	@include font-size(45.24px);
+    }
+
+    p {
+        @include font-size(19.23px);
+        font-weight: $font-weight-light;
+    }
+
+    img {
+        @include transition(all .3s ease);
+        animation: slideFromLeft 1.5s forwards;
+        animation-delay: 0.5s;
+    }
+}
+
+.slider-right {
+	img {
+		position: relative;
+		opacity: 0;
+        @include transition(all .3s ease);
+        animation: slideFromBottom 1.5s forwards;
     }
 }
