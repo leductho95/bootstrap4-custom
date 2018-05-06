@@ -33,15 +33,6 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 	  .pipe(gulp.dest('js'));
 });
 
-gulp.task('compileSass', function() {
-  return gulp.src("sass/main.scss")
-    .pipe(maps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(maps.write('./'))
-    .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream());
-});
 
 gulp.task("minifyCss", ["compileSass"], function() {
   return gulp.src("css/main.css")
@@ -50,10 +41,7 @@ gulp.task("minifyCss", ["compileSass"], function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('watchFiles', function() {
-  gulp.watch('sass/**/*.scss', ['compileSass']);
-  gulp.watch('assets/js/*.js', ['concatScripts']);
-})
+
 
 gulp.task('clean', function() {
   del(['dist', 'css/main.css*', 'js/main*.js*']);
@@ -76,6 +64,22 @@ gulp.task("build", ['minifyScripts', 'minifyCss'], function() {
 		"assets/img/**"
 	], { base: './'})
 		.pipe(gulp.dest('./'));
+});
+
+gulp.task('compileSass', function() {
+  return gulp.src("sass/main.scss")
+    .pipe(maps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(maps.write('./'))
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.stream());
+});
+
+
+gulp.task('watchFiles', function() {
+  gulp.watch('sass/*.scss', ['compileSass']);
+  gulp.watch('assets/js/*.js', ['concatScripts']);
 });
 
 gulp.task('serve', ['watchFiles'], function(){
