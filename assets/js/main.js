@@ -23,6 +23,10 @@ $(document).ready(function() {
         $('.newsletter, .overlay-newsletter').addClass('hide-popup');
     });
 
+    $('.active-cart').click(function() {
+    	$('header-cart').addClass('header-active');
+
+    });
     // var popup = setInterval(function() {
     //     $('.newsletter, .overlay-newsletter').addClass('hide-popup');
     // }, 5000);

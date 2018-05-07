@@ -7,35 +7,57 @@ $font-size-base: 0.875rem;
 // Descriptive color variables
 $gray-1: #c1c1c1;
 $gray-2: #818181;
+$gray-3: #e6e6e6;
+$gray-4: #212121;
+$boulder: #7d7d7d;
+$dove-gray: #656565;
+$mercury: #e7e7e7;
 $sunflower: #E3CE33; 
 $greyser: #CBD3DF; 
 $bermuda: #88d8da;
 $pink: #f49ac2;
 $codgray-1: #1a1a1a;
 $codgray-2: #cacaca;
+$codgray-3: #131313;
 $wild-sand: rgba(244, 244, 244, 0.2);
 $tundora: #494949;
 $alto: #d1d1d1;
 $nobel: #b4b4b4;
 $silver: #c2c2c2;
+$quincy: #6c3c33;
+$cardinal: #c72527;
+$font-weight-semibold: 600;
 
 // Functional color variables
 $body-color:    $codgray-1;
+$link-color: $gray-2;
 $navbar-bg-color:   $wild-sand;
+$navbar-border-color: $mercury;
 $heading-color: $black;
 $heading-under-line-color: $nobel;
 $navbar-color:  $codgray-1;
+$link-slider-color: $codgray-1;
+$para-slider-color: $quincy;
 $navbar-color-active: $primary;
 $border-color: $silver;
 $product-bg-1: $sunflower; 
 $product-bg-2: $greyser; 
 $product-bg-3: $bermuda;
 $product-bg-4: $pink;
+$sale-price-color: $cardinal;
 $tab-color:  $gray-2;
+$mega-menu-color: $gray-2;
+$cart-link-color: $gray-4;
+$mega-border-heading: $gray-3;
 $social-color: $codgray-2;
+$newsletter-color: $dove-gray;
+$newsletter-placeholder-color: $boulder;
+$newsletter-heading-color: $codgray-1;
+$newsletter-submit-color: $codgray-3;
 $footer-bg: $black;
 $footer-heading-color: $alto;
 $footer-color: $tundora;
+
 
 // Typography
 $footer-heading-fontsize: 1.125rem;
@@ -46,6 +68,8 @@ $stack-opensans: 'Open Sans', $font-family-base;
 $stack-roboto: 'Roboto', $font-family-base;
 $stack-roboto-slab: 'Roboto Slab', $font-family-base;
 $stack-playball: 'Playball', $font-family-base;
+$stack-lobster: 'Lobster', cursive;;
+
 // Asset paths
 $path-image   :'../images';
 $path-fonts     :'../fonts';

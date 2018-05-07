@@ -24,12 +24,16 @@ footer {
     }
 }
 
+.site-footer {
+    padding: 50px 40px;
+}
+
 .copy-right {
     border-top: 1px solid;
     padding: 16px 0;
 }
 
-.about-us {
+.contact-us {
     font-family: $stack-roboto;
     p>span:nth-child(2) {
         margin-left: 15px;

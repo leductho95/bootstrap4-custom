@@ -1,8 +1,43 @@
+@font-face {
+        font-family: "UTMViceroyJF";
+        font-style: italic;
+        font-weight: bold;
+        src: url("../fonts/UTM ViceroyJF.ttf") format("truetype");
+    }
 header {
     background-color: #f1f1f1;
     position: relative;
     z-index: 1;
     overflow: hidden;
+    font-family: "UTMViceroyJF";
+}
+
+.header-right {
+
+    a {
+        color: $black;
+        &:first-child {
+            margin-right: 40px;
+            &:hover .header-cart {
+                opacity: 0;
+            }
+        }
+
+        &.active-cart:hover .mega-menu {
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes slideFromLeft {
@@ -27,8 +62,8 @@ header {
 
 .menu {
     background-color: $navbar-bg-color;
-    border-bottom: 1px solid $border-color;
-    padding: 9px 0;
+    border-bottom: 1px solid $navbar-border-color;
+    padding: 8px 0;
     position: absolute;
     width: 100%;
     top: 0;
@@ -37,15 +72,174 @@ header {
 }
 
 .navbar-nav {
+    padding-left: 75px;
     li {
         a {
             color: $navbar-color;
+            font-weight: $font-weight-bold;
             text-transform: uppercase;
             @include font-size(12px);
+            margin-left: 25px;
+            @include transition(all .2s ease);
+            &:hover {
+                color: $primary;
+            }
+            &.active-mega:hover .mega-menu {
+                opacity: 1;
+                visibility: visible;
+            }
         }
+
         &.active a {
             color: $primary;
         }
+    }
+}
+
+.mega-menu {
+    position: absolute;
+    top: 70px;
+    left: 130px;
+    background: $white;
+    min-width: 670px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border: 2px solid $primary;
+    opacity: 0;
+    transform: translateY(100px);
+    visibility: hidden;
+    @include transition(all .5s ease);
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: -10px;
+        left: 34%;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 10px solid $primary;
+    }
+
+    a {
+        color: $mega-menu-color;
+        @include font-size(13px);
+        position: relative;
+        @include transition(all .3s ease);
+        &::before {
+            position: absolute;
+            left: 0px;
+            top: 7px;
+            width: 3px;
+            height: 3px;
+            background: $primary;
+            content: '';
+            border-radius: 50%;
+            opacity: 0;
+            @include transition(all .3s ease);
+        }
+
+
+        &:hover {
+            color: $primary;
+            padding-left: 5px;
+        }
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}
+
+.header-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-menu-item {
+    margin-right: 50px;
+    overflow: hidden;
+    min-width: 140px;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    h4 {
+        @include font-size(14px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid $mega-border-heading;
+        padding-bottom: 15px;
+    }
+}
+
+.header-cart {
+    position: relative;
+    @include font-size(12px);
+    border: 2px solid $primary;
+    background: $white;
+    position: absolute;
+    top: 54px;
+    left: 25px;
+    min-width: 200px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+    @include transition(all .5s ease);
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: -10px;
+        left: 34%;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 10px solid $primary;
+    }
+
+    ul {
+        a {
+            @include font-size(12px);
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            margin-right: 10px;
+        }
+
+        span {
+            @extend %price;
+            position: absolute;
+            left: 87px;
+            top: 30px;
+        }
+    }
+}
+
+.total-cart {
+    border-top: 1px solid $mega-border-heading;
+    a {
+        display: inline-block;
+        background: $cart-link-color;
+        color: $white;
+        width: 70px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: -43px;
+    }
+
+    span:nth-child(2) {
+        @extend %price;
     }
 }
 
@@ -61,37 +255,51 @@ header {
     a {
         text-transform: uppercase;
         font-weight: $font-weight-light;
-
     }
 
     a {
-    	text-decoration: underline;
+        text-decoration: underline;
+        color: $link-slider-color;
+        @include font-size(18px);
+        @include transition(all .1s ease);
+        animation: zoomIn 1s forwards;
+        animation-delay: 1.5s;
     }
 
-	h1 {
-		@include font-size(141.27px);
-	}
+    h1 {
+        @include font-size(141.27px);
+        @include transition(all .1s ease);
+        animation: slideFromLeft 1s forwards;
+        animation-delay: 0.5s;
+    }
 
     h2 {
-    	@include font-size(45.24px);
+        @include font-size(45.24px);
+        @include transition(all .1s ease);
+        animation: slideFromLeft 1s forwards;
+        animation-delay: 1.5s;
     }
 
     p {
         @include font-size(19.23px);
         font-weight: $font-weight-light;
+        color: $para-slider-color;
+        @include transition(all .1s ease);
+        animation: slideFromLeft 1s forwards;
+        animation-delay: 1s;
     }
 
     img {
         @include transition(all .3s ease);
-        animation: slideFromLeft 1.5s forwards;
+        animation: zoomIn 2s forwards;
         animation-delay: 0.5s;
     }
 }
 
 .slider-right {
-	img {
-		position: relative;
-		opacity: 0;
+    img {
+        position: relative;
+        opacity: 0;
         @include transition(all .3s ease);
         animation: slideFromBottom 1.5s forwards;
     }

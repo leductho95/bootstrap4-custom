@@ -1,18 +1,50 @@
 /* Base Styles -------------------- */
+
 body {
-    @include text(0.875em, 30px, $font-weight-base, $body-color);
+    @include text(0.875rem, 30px, $font-weight-base, $body-color);
     font-family: $stack-opensans;
 }
 
 a,
 a:hover,
 a:focus {
-	text-decoration: none;
+    text-decoration: none;
+    @include transition(all .3s ease);
+}
+
+a:hover {
+    color: $primary;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+}
+
+.nav-tabs,
+.nav-link,
+.nav-link.active,
+.nav-link:hover {
+    border: 0;
+    color: $tab-color;
+}
+
+.nav-link.active,
+.nav-link:hover {
+	color: $primary;
 }
 
 .gutter-10 {
-	padding-left: 5px !important;
-	padding-right: 5px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
 }
-
-

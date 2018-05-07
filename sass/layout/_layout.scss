@@ -1,6 +1,6 @@
 .overlay-newsletter {
     position: fixed;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     top: 0;
     left: 0;
     width: 100%;
@@ -26,17 +26,62 @@
     @include transition(all .3s ease);
     a {
         color: #fff;
-        font-size: 3em;
+        font-size: 3rem;
         margin-bottom: 40px;
         display: inline-block;
     }
 
     .pop-up-content {
         @include border-radius(50%);
+        @include font-size(12px);
+        color: $newsletter-color;
         width: 600px;
         height: 600px;
+        padding: 190px 50px 0;
         background: url('#{$path-image}/bg_popup.png') no-repeat;
         @include transition(all .3s ease);
+
+        h3 {
+            font-weight: $font-weight-bold;
+            @include font-size(28px);
+            text-transform: uppercase;
+            color: $newsletter-heading-color;
+        }
+
+        p {
+            margin-bottom: 0;
+            line-height: 20px;
+        }
+
+        input[type="email"] {
+            @include border-radius(50px);
+            border-width: 2px;
+            margin: 25px 0 20px;
+            &::-webkit-input-placeholder {
+                @include font-size(12px);
+                color: $newsletter-placeholder-color;
+            }
+            &::-moz-placeholder {
+                @include font-size(12px);
+                color: $newsletter-placeholder-color;
+            }
+            &:-ms-input-placeholder {
+                @include font-size(12px);
+                color: $newsletter-placeholder-color;
+            }
+            &:-moz-placeholder {
+                @include font-size(12px);
+                color: $newsletter-placeholder-color;
+            }
+        }
+
+        button {
+            @include font-size(14px);
+            color: $newsletter-submit-color;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
     }
 }
 
@@ -84,6 +129,24 @@
     }
 }
 
+.banner-product-text {
+    min-height: 295px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+        border-bottom: 1px solid $heading-color;
+        padding-bottom: 10px;
+        font-family: $stack-roboto-slab;
+        font-weight: $font-weight-light;
+    }
+}
+
+.banner-left {
+    margin-bottom: 10px;
+}
+
 .testimonial {
     .testimonial-content {
         background: url('#{ $path-image }/bg-testimonial.jpg') right center no-repeat;
@@ -98,6 +161,97 @@
     }
 }
 
+.product-tabs {
+    background: url('#{$path-image}/bg-product.jpg') no-repeat;
+}
+
+.product-block {
+    // background: $white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+        transform: scale(1);
+        @include transition(all .3s ease);
+    }
+    &:hover .product-action {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+.product-caption {
+    background: $white;
+    border-top: 1px dashed $border-color;
+    padding: 20px 0 15px;
+    text-align: center;
+    h3 {
+        @include font-size(13px);
+        a {
+            color: $link-color;
+        }
+    }
+    h4 {
+        @include font-size(16px);
+        a {
+            color: $heading-color;
+        }
+    }
+    span {
+        font-family: $stack-lobster;
+        @include font-size(18px);
+        &.price {
+            color: $primary;
+            
+        }
+
+        &.separate-line {
+            width: 50px;
+            height: 2px;
+            margin: 0 auto;
+            background: $border-color;
+            display: inherit;
+            margin-bottom: 5px;
+        }
+
+        &.regular-price {
+            color: $link-color;
+            @include font-size(14px);
+        }
+
+        &.sale-price {
+            color: $sale-price-color;
+        }
+    }
+}
+
+.product-action {
+    background: $white;
+    padding: 0 0 30px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    @include transition(all .5s ease);
+    a {
+        border: 2px solid $border-color;
+        @include border-radius(10px);
+        @include transition(all .3s ease);
+        padding: 6px 10px;
+        color: $black;
+        margin-right: 3px;
+        &:hover {
+            background: $primary;
+            border: 2px solid $primary;
+            color: $white;
+        }
+    }
+}
 
 .social {
     a {
@@ -125,6 +279,89 @@
                 color: $black;
                 border-color: $black;
             }
+        }
+    }
+}
+
+.above-footer {
+    @include font-size(12px);
+    h3 {
+        @include font-size(16px);
+        font-weight: $font-weight-bold;
+        font-family: $stack-opensans;
+        border-bottom: 1px solid $border-color;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 30px;
+            left: 30%;
+            width: 140px;
+            height: 9px;
+            padding: 0 10px;
+            background: url('#{$path-image}/bg-title.jpg') no-repeat;
+        }
+    }
+
+    h4 {
+        @include font-size(12px);
+        text-transform: uppercase;
+        font-weight: $font-weight-semibold;
+        margin-top: 40px;
+    }
+
+    p {
+        line-height: 18px;
+    }
+
+    a {
+        color: $link-color;
+        @include transition(all .3s ease);
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.blog {
+
+    a {
+        color: $heading-color;
+    }
+}
+
+.blog-content {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 15px 0 5px;
+
+
+    p {
+        margin-bottom: 0;
+    }
+
+    span {
+        color: $link-color;
+        font-style: italic;
+    }
+}
+
+.product-tags {
+    a {
+        border: 1px solid $border-color;
+        padding: 0px 6px;
+        margin-right: 5px;
+        display: inline-block;
+        margin-bottom: 10px;
+        @include transition(all .3s ease);
+        &:hover {
+            background: $primary;
+            border: 1px solid $primary;
+            color: $white;
         }
     }
 }
