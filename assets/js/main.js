@@ -3483,7 +3483,7 @@ $(document).ready(function() {
 
     $('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 30,
+        margin: 50,
         nav: true,
         dots: false,
         navText: ['<img src="images/arrow-left.png" alt="" />', '<img src="images/arrow-right.png" alt="" />'],
@@ -3495,7 +3495,7 @@ $(document).ready(function() {
                 items: 2
             },
             1000: {
-                items: 4
+                items: 6
             }
         }
     });
