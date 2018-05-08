@@ -1,62 +1,65 @@
-@font-face {
-        font-family: "UTMViceroyJF";
-        font-style: italic;
-        font-weight: bold;
-        src: url("../fonts/UTM ViceroyJF.ttf") format("truetype");
-    }
 header {
     background-color: #f1f1f1;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    font-family: "UTMViceroyJF";
 }
 
 .header-right {
-
     a {
         color: $black;
-        &:first-child {
+        &:hover {
+            color: $primary;
+        }
+    }
+    >li:first-child {
+        a {
             margin-right: 40px;
-            &:hover .header-cart {
-                opacity: 0;
-            }
+            display: inline-block;
         }
+        &:hover .header-cart {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
 
-        &.active-cart:hover .mega-menu {
-            opacity: 0;
+    >li:last-child {
+        &:hover .search-form {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
     }
 }
 
-@keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0);
+.search-form {
+    position: absolute;
+    min-width: 260px;
+    background: $white;
+    border: 2px solid $primary;
+    padding: 10px;
+    right: 0;
+    top: 55px;
+    @include transition(all .5s ease);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+    button {
+        background: $primary;
+        boreder: 1px solid $primary;
+        color: $white;
     }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes slideFromLeft {
-    0% {
-        transform: translateX(-150px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
-}
-
-@keyframes slideFromBottom {
-    0% {
-        transform: translateY(800px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
+    &::before {
+        position: absolute;
+        content: '';
+        top: -12px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 10px solid #789629;
     }
 }
 
@@ -73,14 +76,20 @@ header {
 
 .navbar-nav {
     padding-left: 75px;
-    li {
-        a {
+
+    >li {
+        >a {
             color: $navbar-color;
             font-weight: $font-weight-bold;
             text-transform: uppercase;
             @include font-size(12px);
             margin-left: 25px;
             @include transition(all .2s ease);
+
+            @include media-breakpoint-down(lg) {
+                margin-left: 10px;
+            }
+
             &:hover {
                 color: $primary;
             }
@@ -93,17 +102,23 @@ header {
         &.active a {
             color: $primary;
         }
+
+        &.active-mega:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
     }
 }
 
 .mega-menu {
     position: absolute;
     top: 70px;
-    left: 130px;
+    left: 120px;
     background: $white;
     min-width: 670px;
     margin: 0 auto;
-    padding: 30px 40px;
+    padding: 30px;
     border: 2px solid $primary;
     opacity: 0;
     transform: translateY(100px);
@@ -243,8 +258,15 @@ header {
     }
 }
 
+.show-cart {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
 .slider-left {
-    padding-top: 140px;
+    padding-top: 100px;
 
     h1,
     h2 {
@@ -267,6 +289,8 @@ header {
     }
 
     h1 {
+        font-family: "UTMViceroyJF";
+        margin: 0;
         @include font-size(141.27px);
         @include transition(all .1s ease);
         animation: slideFromLeft 1s forwards;
@@ -282,6 +306,7 @@ header {
 
     p {
         @include font-size(19.23px);
+        margin: 0;
         font-weight: $font-weight-light;
         color: $para-slider-color;
         @include transition(all .1s ease);

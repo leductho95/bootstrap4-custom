@@ -1,5 +1,6 @@
 footer {
     background: $footer-bg;
+    @include font-size(13px);
     color: $footer-color;
     font-family: $stack-opensans;
     

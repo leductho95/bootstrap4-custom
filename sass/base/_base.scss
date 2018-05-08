@@ -1,7 +1,7 @@
 /* Base Styles -------------------- */
 
 body {
-    @include text(0.875rem, 30px, $font-weight-base, $body-color);
+    @include text(14px, 30px, $font-weight-base, $body-color);
     font-family: $stack-opensans;
 }
 
@@ -31,20 +31,145 @@ h6 {
     color: $heading-color;
 }
 
+button:focus {
+    outline: 0;
+}
+
+::-webkit-input-placeholder {
+    @include font-size(12px);
+    color: $newsletter-placeholder-color;
+}
+
+::-moz-placeholder {
+    @include font-size(12px);
+    color: $newsletter-placeholder-color;
+}
+
+:-ms-input-placeholder {
+    @include font-size(12px);
+    color: $newsletter-placeholder-color;
+}
+
+:-moz-placeholder {
+    @include font-size(12px);
+    color: $newsletter-placeholder-color;
+}
+
+@font-face {
+    font-family: "UTMViceroyJF";
+    src: url("../fonts/UTM ViceroyJF.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UTM A&S Graceland";
+    src: url("../fonts/UTM A&S Graceland.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "UTM AvoBold";
+    src: url("../fonts/UTM AvoBold.ttf") format("truetype");
+}
+
+.bg-sunflower {
+    background: $product-bg-1;
+    h3 {
+        color: $white;
+    }
+    &::before {
+        @extend %product-arrow-left;
+        border-right: 20px solid $product-bg-1;
+    }
+}
+
+.bg-greyser {
+    background: $product-bg-2;
+    &::after {
+        @extend %product-arrow-right;
+        border-left: 20px solid $product-bg-2;
+    }
+}
+
+.bg-bermuda {
+    background: $product-bg-3;
+    &::after {
+        @extend %product-arrow-right;
+        border-left: 20px solid $product-bg-3;
+    }
+}
+
+.bg-pink {
+    background: $product-bg-4;
+    &::before {
+        @extend %product-arrow-left;
+        border-right: 20px solid $product-bg-4;
+    }
+}
+
 .nav-tabs,
 .nav-link,
 .nav-link.active,
 .nav-link:hover {
-    border: 0;
+    background: transparent !important;
+    border: 0 !important;
     color: $tab-color;
 }
 
 .nav-link.active,
 .nav-link:hover {
-	color: $primary;
+    color: $primary;
+}
+
+.navbar-toggler {
+  background-color: $primary;
 }
 
 .gutter-10 {
     padding-left: 5px !important;
     padding-right: 5px !important;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-150px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(800px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .menu {
+        position: fixed !important;
+    }
+    .navbar {
+        position: absolute;
+    }
+    .banner-right {
+        margin: 10px 0;
+    }
 }
